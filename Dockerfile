@@ -3,4 +3,10 @@ MAINTAINER Emmanuel Frecon <efrecon@gmail.com>
 
 RUN npm install -g localtunnel
 
-ENTRYPOINT ["node", "/usr/bin/lt"]
+ENV $LTHOST="http://localtunnel.me"
+ENV $LTSUBDOMAIN=""
+ENV $LTLOCALHOST="localhost"
+ENV $LTOPEN=""
+ENV $LTPORT="80"
+
+ENTRYPOINT node /usr/bin/lt --host $LTHOST --subdomain $LTSUBDOMAIN --local-host $LTLOCALHOST --open $LTOPEN --port $LTPORT
