@@ -8,4 +8,4 @@ ENV LTSUBDOMAIN=""
 ENV LTLOCALHOST="localhost"
 ENV LTPORT="80"
 
-ENTRYPOINT node /usr/bin/lt --host $LTHOST --subdomain $LTSUBDOMAIN --local-host $LTLOCALHOST --open $LTOPEN --port $LTPORT
+ENTRYPOINT node /usr/bin/lt --host $LTHOST --subdomain $LTSUBDOMAIN --local-host $LTLOCALHOST --port $LTPORT
